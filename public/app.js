@@ -38,3 +38,23 @@ const habitsList = document.getElementById('habitsList');
 
 let habitsRef;
 let unsubsribe;
+
+auth.onAuthStateChanged(user => {
+
+  if(user) {
+     
+    habitsRef = db.collection('habits')
+
+    createHabit.onclick = () => {
+      habitsRef.add({
+
+        uid: user.uid,
+        name: "I am name",
+        createdAt: serverTimestamp()
+
+
+      });
+    }
+  }
+
+})
