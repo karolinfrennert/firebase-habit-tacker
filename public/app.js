@@ -30,3 +30,11 @@ auth.onAuthStateChanged(user => {
   }
 
 });
+
+const db = firebase.firestore();
+
+const addHabit = document.getElementById('addHabit');
+const habitsList = document.getElementById('habitsList');
+
+let habitsRef;
+let unsubsribe;
