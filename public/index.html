@@ -5,20 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Habit Tracker</title>
+  <link href="style.css" rel="stylesheet">
   <!--Faker-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
     integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
     crossorigin="anonymous"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- TODO: Add SDKs for Firebase products that you want to use https:
+      //firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-  <script>
-    // Your web app's Firebase configuration
+  <script> // Your web app's Firebase configuration
+
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
       apiKey: "AIzaSyCcfPCbwnXw18W_sdW56xG5yYWLcvjeXK0",
@@ -29,12 +29,13 @@
       messagingSenderId: "1021115530067",
       appId: "1:1021115530067:web:c34fa327f3e55668157fa6",
       measurementId: "G-Z12W6DB0VE"
-    };
+    }
+
+      ;
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
   <!-- include only the Firebase features as you need -->
@@ -47,38 +48,40 @@
   <script defer src="/__/firebase/7.24.0/firebase-performance.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
-
-
 </head>
 
 <body>
   <main>
-    <h1>Habit tracker 💃</h1>
+
 
     <section id="whenSignedOut">
       <button id="signInBtn">Sign in with Google</button>
-
     </section>
 
-    <section id="whenSignedIn" hidden="true">
-      <div id="userDetails"></div>
-      <button id="signOutBtn">Sign out</button>
+    <!--Visible when user is signed in-->
 
+    <section class="user-logged-in" id="whenSignedIn" hidden="true">
+      <section class="container">
+        <h1 class="header">Habit tracker 💃</h1>
+        <button class="sign-out-btn" id="signOutBtn">Sign out</button>
+
+        <div class="greeting" id="userDetails">
+        </div>
+        <ul class="habit-list" id="habitsList">
+          <li class="box">Hey</li>
+          <li class="box">Hey</li>
+        </ul>
+        <button class="add-habit" id="addHabit">Add Habit</button>
+      </section>
     </section>
 
-    <section>
-
-      <ul id="habitsList">
-
-      </ul>
-
-      <button id="addHabit">Add Habit</button>
-    </section>
   </main>
+  <footer class="footer">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio placeat eligendi? Sint animi minima ex
+      voluptates natus distinctio eius dignissimos id ea. Facilis, temporibus. Veritatis nesciunt at eaque autem.</p>
+  </footer>
 
-  <script src="app.js">
-
-  </script>
+  <script src="app.js"></script>
 </body>
 
 </html>
