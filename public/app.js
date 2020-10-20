@@ -1,3 +1,4 @@
+
 const auth = firebase.auth();
 
 
@@ -47,7 +48,7 @@ auth.onAuthStateChanged(user => {
      
     habitsRef = db.collection('habits')
 
-    createHabit.onclick = () => {
+    addHabit.onclick = () => {
       const {serverTimestamp} = firebase.firestore.FieldValue;
 
       habitsRef.add({
@@ -60,10 +61,10 @@ auth.onAuthStateChanged(user => {
       });
     }
 
-    unsubscribe = thingsRef 
+    unsubscribe = habitsRef 
       .where('uid', '==', user.uid)
       .onSnapshot(querySnapshot => {
-        const items = querySnapshots.docs.map(doc => {
+        const items = querySnapshot.docs.map(doc => {
           return `<li>${doc.data().name}</li>`
         });
         habitsList.innerHTML = items.join('');
