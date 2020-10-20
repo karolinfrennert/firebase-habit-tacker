@@ -1,5 +1,6 @@
 const auth = firebase.auth();
-console.log(auth);
+
+
 //Selectors 
 const whenSignedIn = document.getElementById('whenSignedIn');
 const whenSignedOut = document.getElementById('whenSignedOut');
@@ -10,6 +11,7 @@ const signOutbtn = document.getElementById('signOutBtn');
 const userDetails = document.getElementById('userDetails');
 
 const provider = new firebase.auth.GoogleAuthProvider();
+
 
 signInBtn.onclick = () => auth.signInWithPopup(provider);
 
@@ -46,15 +48,26 @@ auth.onAuthStateChanged(user => {
     habitsRef = db.collection('habits')
 
     createHabit.onclick = () => {
+      const {serverTimestamp} = firebase.firestore.FieldValue;
+
       habitsRef.add({
 
         uid: user.uid,
-        name: "I am name",
+        name: faker.commerce.productName(),
         createdAt: serverTimestamp()
 
 
       });
     }
+
+    unsubscribe = thingsRef 
+      .where('uid', '==', user.uid)
+      .onSnapshot(querySnapshot => {
+        const items = querySnapshots.docs.map(doc => {
+          return `<li>${doc.data().name}</li>`
+        });
+        habitsList.innerHTML = items.join('');
+      });
   }
 
 })
