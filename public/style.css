@@ -20,7 +20,7 @@ body {
   display: grid;
   width: auto;
   height: 100vh;
-  grid-template: repeat(12, 1fr);
+  grid-template: repeat(8, 1fr) / repeat(4, 1fr);
   background:var(--primary-bg-color);
 }
 
