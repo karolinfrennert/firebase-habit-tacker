@@ -13,6 +13,10 @@ const userDetails = document.getElementById('userDetails');
 
 const provider = new firebase.auth.GoogleAuthProvider();
 
+//input field
+//const inputHabit = document.getElementById('input-habit');
+
+
 
 signInBtn.onclick = () => auth.signInWithPopup(provider);
 
@@ -44,12 +48,12 @@ let unsubsribe;
 
 auth.onAuthStateChanged(user => {
 
-  if(user) {
-     
+  if (user) {
+
     habitsRef = db.collection('habits')
 
     addHabit.onclick = () => {
-      const {serverTimestamp} = firebase.firestore.FieldValue;
+      const { serverTimestamp } = firebase.firestore.FieldValue;
 
       habitsRef.add({
 
@@ -61,7 +65,7 @@ auth.onAuthStateChanged(user => {
       });
     }
 
-    unsubscribe = habitsRef 
+    unsubscribe = habitsRef
       .where('uid', '==', user.uid)
       .onSnapshot(querySnapshot => {
         const items = querySnapshot.docs.map(doc => {
@@ -72,3 +76,5 @@ auth.onAuthStateChanged(user => {
   }
 
 })
+
+

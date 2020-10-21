@@ -23,9 +23,7 @@ footer{
   display: grid;
   width: auto;
   height: 100vh;
-  grid-template-columns: 25% 1fr 25%;
-  grid-template-rows: 1fr 1fr 1fr  100px;
-  grid-gap: 1rem;
+  grid-template: repeat(12, 1fr) 100px / reapeat(6, 1fr);
   background:var(--primary-bg-color);
 }
 
@@ -65,8 +63,7 @@ footer{
   grid-column: 1 / 4;
   width: 6rem;
   height: 2rem;
-  position: relative;
-  top: 5.5rem;
+ 
 
 }
 
