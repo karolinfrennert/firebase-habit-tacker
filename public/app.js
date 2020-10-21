@@ -44,7 +44,8 @@ auth.onAuthStateChanged(user => {
   if (user) {
     habitsRef = db.collection("habits");
 
-    addHabit.onclick = () => {
+    addHabit.onclick = (e) => {
+      e.preventDefault()
       const { serverTimestamp } = firebase.firestore.FieldValue;
 
       habitsRef.add({

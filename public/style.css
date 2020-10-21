@@ -22,17 +22,12 @@ body {
   font-family: var(--font-family-Nunito-regular);
 }
 
-/*footer{
-  background: blue;
-} */
-
-.container {
+.container{
   display: grid;
   width: auto;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  background: var(--primary-bg-color);
+  grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+  background:var(--primary-bg-color);
 }
 
 .user-logged-in {
