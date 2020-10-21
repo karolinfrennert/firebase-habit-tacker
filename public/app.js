@@ -50,7 +50,7 @@ auth.onAuthStateChanged(user => {
 
   if (user) {
 
-    habitsRef = db.collection('habits')
+    habitsRef = db.collection('things')
 
     addHabit.onclick = () => {
       const { serverTimestamp } = firebase.firestore.FieldValue;
