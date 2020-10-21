@@ -23,7 +23,6 @@ signInBtn.onclick = () => auth.signInWithPopup(provider);
 signOutbtn.onclick = () => auth.signOut();
 
 auth.onAuthStateChanged(user => {
-  console.log('AuthStateCHanged',{user})
   if (user) {
     //signed in
     whenSignedIn.hidden = false;
@@ -48,16 +47,13 @@ let habitsRef;
 let unsubsribe;
 
 auth.onAuthStateChanged(user => {
-  console.log({user})
 
   if (user) {
 
     habitsRef = db.collection('habits')
-    console.log({habitsRef})
 
     addHabit.onclick = (e) => {
       e.preventDefault()
-      console.log('Clicked to add habit')
       const { serverTimestamp } = firebase.firestore.FieldValue;
 
       habitsRef.add({
