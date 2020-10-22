@@ -21,13 +21,16 @@ signOutbtn.onclick = function () {
 auth.onAuthStateChanged(function (user) {
   if (user) {
     //signed in
-    whenSignedIn.hidden = false;
-    whenSignedOut.hidden = true;
+
+    /*change hidden to style.display, Because the power of style.display attribute
+     is more than the attribute of hidden.*/
+    whenSignedIn.style.display = "initial";
+    whenSignedOut.style.display = "none";
     userDetails.innerHTML = "<h3> Hello ".concat(user.displayName, "!</h3> ");
   } else {
     //not signed in
-    whenSignedIn.hidden = true;
-    whenSignedOut.hidden = false;
+    whenSignedIn.style.display = "none";
+    whenSignedOut.style.display = "initial";
     userDetails.innerHTML = "";
   }
 });

@@ -12,7 +12,15 @@
     --font-family-Nunito-regular: "Nunito Sans", sans-serif;
 }
 
-.signInSection {}
+
+/*add grid to sign in section vvvv*/
+
+.sign-in-section {
+    display: grid;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 body {
     color: black;
