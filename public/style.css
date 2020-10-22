@@ -5,7 +5,7 @@
 
 :root {
   --primary-bg-color: #bbbef2;
-  --habit-list-bg-color: #797a9e;
+  --habit-list-bg-color: v #797a9e;
   --background-color: linear-gradient(
     180deg,
     rgba(151, 148, 213, 0.65) 0%,
@@ -67,13 +67,12 @@ body {
   align-self: center;
   color: var(--text-bg-color);
   font-family: var(--font-family-Inter);
-
   font-size: 1.5rem;
 }
 
 .input-field {
   grid-row: 3 / 4;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   font-family: var(--font-family-Inter);
 }
 
@@ -114,11 +113,3 @@ input {
   border: var(--primary-bg-color) solid 2px;
 }
 
-.footer {
-  grid-row: 4 / 5;
-  grid-column: 1 / 4;
-}
-
-.box {
-  list-style: none;
-}
