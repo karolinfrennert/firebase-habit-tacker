@@ -37,7 +37,7 @@
 <body>
   <main>
     <section id="whenSignedOut">
-      <h1 class="header">Habit tracker 💃</h1>
+      <h1 class="header">Habit tracker</h1>
       <button id="signInBtn">Sign in with Google</button>
     </section>
 
@@ -45,7 +45,7 @@
 
     <section class="user-logged-in" id="whenSignedIn" hidden="true">
       <section class="container">
-        <h1 class="header">Habit tracker 💃</h1>
+        <h1 class="header">Habit tracker</h1>
         <button class="sign-out-btn" id="signOutBtn">Sign out</button>
 
         <div class="greeting" id="userDetails"></div>
@@ -55,7 +55,28 @@
           <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit" />
           <button class="add-habit" id="addHabit">Add Habit</button>
         </form>
-        <ul class="habit-list" id="habitsList"></ul>
+
+        <div class="days">
+        </div>
+
+
+        <div class="title">
+          <div class="habit-holder habit-holder-habit">Habit</div>
+          <div class="habit-holder">Mon</div>
+          <div class="habit-holder">Tue</div>
+          <div class="habit-holder">Wed</div>
+          <div class="habit-holder">Thu</div>
+          <div class="habit-holder">Fri</div>
+          <div class="habit-holder">Sat</div>
+          <div class="habit-holder">Sun</div>
+        </div>
+
+
+
+        <ul class="habit-list" id="habitsList">
+
+        </ul>
+
       </section>
     </section>
   </main>

@@ -26,7 +26,7 @@ body {
   display: grid;
   width: auto;
   height: 100vh;
-  grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(8, 1fr) / repeat(6, 1fr);
   background: var(--background-color);
 }
 
@@ -51,7 +51,7 @@ body {
   width: 128px;
   height: 32px;
   grid-row: 1 / 2;
-  grid-column: 4 / 5;
+  grid-column: 7 / 9;
   justify-self: end;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 .greeting {
   grid-row: 2 / 3;
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
   align-self: center;
   color: var(--text-bg-color);
   font-family: var(--font-family-Inter);
@@ -72,7 +72,7 @@ body {
 
 .input-field {
   grid-row: 3 / 4;
-  grid-column: 2 / 4;
+  grid-column: 2 / 6;
   font-family: var(--font-family-Inter);
 }
 
@@ -88,12 +88,15 @@ input {
 }
 
 .habit-list {
-  border-radius: 8px;
-  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
-  grid-row: 4 / 8;
-  grid-column: 2 / 4;
+  
+  /*box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);*/
+  border: 2px solid white;
+  grid-row: 5 / 8;
+  grid-column: 2 / 3;
   background: var(--habit-list-bg-color);
   display: grid;
+  grid-template: repeat(5, 1fr) / 20% 1fr ;
+  border-right: none;
 }
 
 .add-habit {
@@ -111,5 +114,48 @@ input {
   background: var(--primary-bg-color);
   box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
   border: var(--primary-bg-color) solid 2px;
+  color: white;
+
 }
 
+li {
+  font-size: 0.75rem;
+  list-style-type: none;
+  grid-column: 2/3;
+  align-self: center;
+  
+  
+}
+
+
+
+.days {
+  grid-row: 5 / 8;
+  grid-column: 3/6;
+  border: 2px solid white ;
+  align-items: baseline;
+  border-left: none;
+  display:grid;
+  grid-template: repeat(5, 1fr) / repeat(7, 1fr) 5% ;
+  
+  
+}
+
+.habit-holder {
+  font-size: 0.75rem;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  font-weight: 300;
+
+}
+
+.habit-holder-habit {
+  padding-left: 0.6rem ;
+}
+
+.title {
+  display: flex;
+  grid-row: 4 / 5;
+  grid-column: 2 / 6;
+  justify-content: space-evenly;
+}
