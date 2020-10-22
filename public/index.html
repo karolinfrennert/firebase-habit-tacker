@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Habit Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Habit Tracker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans&display=swap"
-    rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
+    <!--Faker-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+      integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+      crossorigin="anonymous"
+    ></script>
 
-  <!--Faker-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
-    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
-    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCcfPCbwnXw18W_sdW56xG5yYWLcvjeXK0",
+        authDomain: "habit-tracker-hi.firebaseapp.com",
+        databaseURL: "https://habit-tracker-hi.firebaseio.com",
+        projectId: "habit-tracker-hi",
+        storageBucket: "habit-tracker-hi.appspot.com",
+        messagingSenderId: "1021115530067",
+        appId: "1:1021115530067:web:c34fa327f3e55668157fa6",
+        measurementId: "G-Z12W6DB0VE"
+      };
 
-  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyCcfPCbwnXw18W_sdW56xG5yYWLcvjeXK0",
-      authDomain: "habit-tracker-hi.firebaseapp.com",
-      databaseURL: "https://habit-tracker-hi.firebaseio.com",
-      projectId: "habit-tracker-hi",
-      storageBucket: "habit-tracker-hi.appspot.com",
-      messagingSenderId: "1021115530067",
-      appId: "1:1021115530067:web:c34fa327f3e55668157fa6",
-      measurementId: "G-Z12W6DB0VE"
-    };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-</head>
-
-<body>
-  <main>
-    <section id="whenSignedOut">
-      <h1 class="header">Habit tracker 💃</h1>
-      <button id="signInBtn">Sign in with Google</button>
-    </section>
-
-    <!--Visible when user is signed in-->
-
-    <section class="user-logged-in" id="whenSignedIn" hidden="true">
-      <section class="container">
+  <body>
+    <main>
+      <section id="whenSignedOut">
         <h1 class="header">Habit tracker 💃</h1>
-        <button class="sign-out-btn" id="signOutBtn">Sign out</button>
-
-        <div class="greeting" id="userDetails"></div>
-        <form class="input-field">
-          <label for="input-habit">Add your habit</label>
-          <br />
-          <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit" />
-          <button class="add-habit" id="addHabit">Add</button>
-        </form>
-        <ul class="habit-list" id="habitsList" contenteditable="true"></ul>
+        <button id="signInBtn">Sign in with Google</button>
       </section>
-    </section>
-  </main>
 
-  <script src="app.js"></script>
-</body>
+      <!--Visible when user is signed in-->
 
+      <section class="user-logged-in" id="whenSignedIn" hidden="true">
+        <section class="container">
+          <h1 class="header">Habit tracker 💃</h1>
+          <button class="sign-out-btn" id="signOutBtn">Sign out</button>
+
+          <div class="greeting" id="userDetails"></div>
+          <form class="input-field">
+            <label class="input-container" for="input-habit"
+              >Add your habit</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Stop smoking"
+              id="input-habit"
+              name="input-habit"
+            />
+            <button class="add-habit" id="addHabit">Add Habit</button>
+          </form>
+          <ul class="habit-list" id="habitsList" contenteditable="true"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>

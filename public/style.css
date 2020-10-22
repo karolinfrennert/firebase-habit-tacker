@@ -9,7 +9,7 @@
   --background-color: linear-gradient(
     180deg,
     rgba(151, 148, 213, 0.65) 0%,
-    rgba(255, 255, 255, 0.65) 101.42%
+    rgba(255, 255, 255, 0.986) 101.42%
   );
   --text-bg-color: white;
   --font-family-Inter: "Inter", sans-serif;
@@ -22,12 +22,12 @@ body {
   font-family: var(--font-family-Nunito-regular);
 }
 
-.container{
+.container {
   display: grid;
   width: auto;
   height: 100vh;
   grid-template: repeat(8, 1fr) / repeat(4, 1fr);
-  background:var(--primary-bg-color);
+  background: var(--background-color);
 }
 
 .user-logged-in {
@@ -46,7 +46,7 @@ body {
   background: whitesmoke;
   border-radius: 16px;
   border: rgba(265, 265, 265, 0.65) solid 2px;
-  box-shadow: 3px 3px #666666e8;
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
   margin: 1rem 1rem 0 0;
   width: 128px;
   height: 32px;
@@ -56,9 +56,10 @@ body {
 }
 
 .sign-out-btn:hover {
+  color: white;
   background: var(--primary-bg-color);
-  box-shadow: 3px 3px #292929e8;
-  border: rgba(185, 141, 190, 0.65) solid 2px;
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
+  border: var(--primary-bg-color) solid 2px;
 }
 .greeting {
   grid-row: 2 / 3;
@@ -76,17 +77,41 @@ body {
   font-family: var(--font-family-Inter);
 }
 
+input {
+  background: whitesmoke;
+  border-radius: 16px;
+  border: rgba(265, 265, 265, 0.65) solid 2px;
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
+  width: 200px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
 .habit-list {
+  border-radius: 8px;
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
   grid-row: 4 / 8;
   grid-column: 2 / 4;
   background: var(--habit-list-bg-color);
   display: grid;
 }
+
 .add-habit {
+  background: whitesmoke;
+  border-radius: 16px;
+  border: white solid 2px;
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
   grid-row: 2/ 4;
   grid-column: 1 / 4;
   width: 6rem;
   height: 2rem;
+}
+
+.add-habit:hover {
+  background: var(--primary-bg-color);
+  box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
+  border: var(--primary-bg-color) solid 2px;
 }
 
 .footer {
