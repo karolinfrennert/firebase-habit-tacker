@@ -11,6 +11,7 @@
     rgba(151, 148, 213, 0.65) 0%,
     rgba(255, 255, 255, 0.986) 101.42%
   );
+
   --text-bg-color: white;
   --font-family-Inter: "Inter", sans-serif;
   --font-family-Nunito-regular: "Nunito Sans", sans-serif;
@@ -36,7 +37,7 @@ body {
 }
 
 .header {
-  font-size: 3rem;
+  font-size: 8rem;
   margin: 1rem 0 1rem 0;
   grid-row: 1/3;
   grid-column: 1/3;
