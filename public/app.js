@@ -37,6 +37,10 @@ const db = firebase.firestore();
 const addHabit = document.getElementById("addHabit");
 const habitsList = document.getElementById("habitsList");
 
+/*get habit input vv*/
+const inputHabit = document.querySelector("#input-habit")
+    /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
 let habitsRef;
 let unsubsribe;
 
@@ -50,7 +54,9 @@ auth.onAuthStateChanged(user => {
 
             habitsRef.add({
                 uid: user.uid,
-                name: faker.commerce.productName(),
+                /*vvvvvvvvvvvvvvvvvvvv*/
+                name: inputHabit.value,
+                /*^^^^^^^^^^^^^^^^^^^^*/
                 createdAt: serverTimestamp()
             });
         };

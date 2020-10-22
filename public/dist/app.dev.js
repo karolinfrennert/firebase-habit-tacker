@@ -34,6 +34,11 @@ auth.onAuthStateChanged(function (user) {
 var db = firebase.firestore();
 var addHabit = document.getElementById("addHabit");
 var habitsList = document.getElementById("habitsList");
+/*get habit input vv*/
+
+var inputHabit = document.querySelector("#input-habit");
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
 var habitsRef;
 var unsubsribe;
 auth.onAuthStateChanged(function (user) {
@@ -45,7 +50,11 @@ auth.onAuthStateChanged(function (user) {
       var serverTimestamp = firebase.firestore.FieldValue.serverTimestamp;
       habitsRef.add({
         uid: user.uid,
-        name: faker.commerce.productName(),
+
+        /*vvvvvvvvvvvvvvvvvvvv*/
+        name: inputHabit.value,
+
+        /*^^^^^^^^^^^^^^^^^^^^*/
         createdAt: serverTimestamp()
       });
     };
