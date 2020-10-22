@@ -87,15 +87,18 @@ input {
   margin-right: 1rem;
 }
 
+.input-container {
+  color: white;
+}
+
 .habit-list {
-  
   /*box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);*/
   border: 2px solid white;
   grid-row: 5 / 8;
   grid-column: 2 / 3;
   background: var(--habit-list-bg-color);
   display: grid;
-  grid-template: repeat(5, 1fr) / 20% 1fr ;
+  grid-template: repeat(5, 1fr) / 20% 1fr;
   border-right: none;
 }
 
@@ -115,7 +118,6 @@ input {
   box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
   border: var(--primary-bg-color) solid 2px;
   color: white;
-
 }
 
 li {
@@ -123,22 +125,16 @@ li {
   list-style-type: none;
   grid-column: 2/3;
   align-self: center;
-  
-  
 }
-
-
 
 .days {
   grid-row: 5 / 8;
   grid-column: 3/6;
-  border: 2px solid white ;
+  border: 2px solid white;
   align-items: baseline;
   border-left: none;
-  display:grid;
-  grid-template: repeat(5, 1fr) / repeat(7, 1fr) 5% ;
-  
-  
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(7, 1fr) 5%;
 }
 
 .habit-holder {
@@ -146,11 +142,10 @@ li {
   align-self: flex-end;
   margin-bottom: 10px;
   font-weight: 300;
-
 }
 
 .habit-holder-habit {
-  padding-left: 0.6rem ;
+  padding-left: 0.6rem;
 }
 
 .title {
@@ -158,4 +153,6 @@ li {
   grid-row: 4 / 5;
   grid-column: 2 / 6;
   justify-content: space-evenly;
+  border: white;
+  border-radius: 33px;
 }
