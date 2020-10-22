@@ -12,6 +12,8 @@
     --font-family-Nunito-regular: "Nunito Sans", sans-serif;
 }
 
+.signInSection {}
+
 body {
     color: black;
     height: 100vh;
