@@ -2,10 +2,13 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Habit Tracker</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans&display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+
   <!--Faker-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
     integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
@@ -15,8 +18,6 @@
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
   <script>
-
-
     var firebaseConfig = {
       apiKey: "AIzaSyCcfPCbwnXw18W_sdW56xG5yYWLcvjeXK0",
       authDomain: "habit-tracker-hi.firebaseapp.com",
@@ -26,19 +27,15 @@
       messagingSenderId: "1021115530067",
       appId: "1:1021115530067:web:c34fa327f3e55668157fa6",
       measurementId: "G-Z12W6DB0VE"
-    }
+    };
 
-      ;
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-
 </head>
 
 <body>
   <main>
-
-
     <section id="whenSignedOut">
       <h1 class="header">Habit tracker 💃</h1>
       <button id="signInBtn">Sign in with Google</button>
@@ -51,26 +48,17 @@
         <h1 class="header">Habit tracker 💃</h1>
         <button class="sign-out-btn" id="signOutBtn">Sign out</button>
 
-        <div class="greeting" id="userDetails">
-        </div>
-        <form>
+        <div class="greeting" id="userDetails"></div>
+        <form class="input-field">
           <label for="input-habit">Add your habit</label>
-          <br>
-          <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit">
+          <br />
+          <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit" />
           <button class="add-habit" id="addHabit">Add</button>
         </form>
-        <ul class="habit-list" id="habitsList" contenteditable="true">
-
-        </ul>
-
+        <ul class="habit-list" id="habitsList" contenteditable="true"></ul>
       </section>
     </section>
-
   </main>
-  <!--<footer class="footer">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio placeat eligendi? Sint animi minima ex
-      voluptates natus distinctio eius dignissimos id ea. Facilis, temporibus. Veritatis nesciunt at eaque autem.</p>
-  </footer>-->
 
   <script src="app.js"></script>
 </body>
