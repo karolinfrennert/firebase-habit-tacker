@@ -99,7 +99,7 @@ body {
   display: grid;
   grid-template: repeat(5, 1fr) / 20% 1fr;
   border-right: none;
-  border-bottom-left-radius: 0.8rem;s;
+  border-bottom-left-radius: 0.8rem;
 }
 
 .add-habit {
