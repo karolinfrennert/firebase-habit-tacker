@@ -85,6 +85,7 @@ input {
   height: 30px;
   margin-top: 1rem;
   margin-right: 1rem;
+  padding-left: 10px;
 }
 
 .habit-list {
