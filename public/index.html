@@ -32,80 +32,80 @@
 </head>
 
 <body>
-  <main>
-    <section id="whenSignedOut">
-      <h1 class="header">Habit tracker</h1>
-      <button id="signInBtn">Sign in with Google</button>
-    </section>
+    <main>
+        <section id="whenSignedOut">
+            <h1 class="header">Habit tracker</h1>
+            <button id="signInBtn">Sign in with Google</button>
+        </section>
 
-    <!--Visible when user is signed in-->
+        <!--Visible when user is signed in-->
 
-    <section class="user-logged-in" id="whenSignedIn" hidden="true">
-      <section class="container">
-        <h1 class="header">Habit tracker</h1>
-        <button class="sign-out-btn" id="signOutBtn">Sign out</button>
+        <section class="user-logged-in" id="whenSignedIn" hidden="true">
+            <section class="container">
+                <h1 class="header">Habit tracker</h1>
+                <button class="sign-out-btn" id="signOutBtn">Sign out</button>
 
-        <div class="greeting" id="userDetails"></div>
-        <form class="input-field">
-          <label class="input-container" for="input-habit">Add your habit</label>
-          <br />
-          <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit" />
-          <button class="add-habit" id="addHabit">Add Habit</button>
-        </form>
+                <div class="greeting" id="userDetails"></div>
+                <form class="input-field">
+                    <label class="input-container" for="input-habit">Add your habit</label>
+                    <br />
+                    <input type="text" placeholder="Stop smoking" id="input-habit" name="input-habit" />
+                    <button class="add-habit" id="addHabit">Add Habit</button>
+                </form>
 
-        <table class="check-box-table days">
-          <tbody>
-            
-            <tr>
-              <td>
-                <input type="checkbox" class="checkbox" id="check1">
-              </td>
-              <td>
-                <input type="checkbox" class="checkbox" id="check2">
-              </td>
-              <td>
-                <input type="checkbox" class="checkbox" id="check3">
-              </td>
-              <td>
-                <input type="checkbox" class="checkbox" id="check4">
-              </td>
-              <td>
-                <input type="checkbox" class="checkbox" id="check5">
-              </td>
-              <td>
-                <input type="checkbox" class="checkbox" id="check6">
-              </td>
-               <td>
-                <input type="checkbox" class="checkbox" id="check7">
-              </td>
-            
-            </tr>
-          </tbody>
-        </table>
+                <table class="check-box-table days">
+                    <tbody>
 
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check1">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check2">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check3">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check4">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check5">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check6">
+                            </td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="check7">
+                            </td>
 
-        <div class="title">
-          <div class="habit-holder habit-holder-habit">Habit</div>
-          <div class="habit-holder">Mon</div>
-          <div class="habit-holder">Tue</div>
-          <div class="habit-holder">Wed</div>
-          <div class="habit-holder">Thu</div>
-          <div class="habit-holder">Fri</div>
-          <div class="habit-holder">Sat</div>
-          <div class="habit-holder">Sun</div>
-        </div>
+                        </tr>
+                    </tbody>
+                </table>
 
 
+                <div class="title">
+                    <div class="habit-holder habit-holder-habit">Habit</div>
+                    <div class="habit-holder">Mon</div>
+                    <div class="habit-holder">Tue</div>
+                    <div class="habit-holder">Wed</div>
+                    <div class="habit-holder">Thu</div>
+                    <div class="habit-holder">Fri</div>
+                    <div class="habit-holder">Sat</div>
+                    <div class="habit-holder">Sun</div>
+                </div>
 
-        <ul class="habit-list" id="habitsList">
 
-        </ul>
 
-      </section>
-    </section>
-  </main>
+                <ul class="habit-list" id="habitsList">
 
-  <script src="app.js"></script>
+                </ul>
+
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
