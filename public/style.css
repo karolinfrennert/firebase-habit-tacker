@@ -77,7 +77,9 @@ body {
   font-family: var(--font-family-Inter);
 }
 
-input {
+
+
+#input-habit {
   background: whitesmoke;
   border-radius: 16px;
   border: rgba(265, 265, 265, 0.65) solid 2px;
@@ -125,17 +127,28 @@ li {
   align-self: center;
 }
 
+
+
 .days {
   grid-row: 5 / 8;
   grid-column: 3/6;
   border-top: 2px solid white;
   align-items: baseline;
   border-left: none;
-  display: grid;
-  grid-template: repeat(5, 1fr) / repeat(7, 1fr) 5%;
+  
   background-color: #bbbef2;
   border-bottom-right-radius: 0.5rem;
   /*box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);*/
+}
+
+tr {
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+}
+
+.checkbox {
+  justify-self: right;
 }
 
 .habit-holder {
