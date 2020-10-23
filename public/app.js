@@ -75,19 +75,7 @@ auth.onAuthStateChanged(user => {
         /*add function below*/
         .onSnapshot(querySnapshot => {
 
-            /*past the days' name here*/
-
-            if (querySnapshot.docs.length) {
-                document.querySelector('#habitsTableHead').innerHTML = `<div class="habit-holder habit-holder-habit">Habit</div>
-                <div class="habit-holder">Mon</div>
-                <div class="habit-holder">Tue</div>
-                <div class="habit-holder">Wed</div>
-                <div class="habit-holder">Thu</div>
-                <div class="habit-holder">Fri</div>
-                <div class="habit-holder">Sat</div>
-                <div class="habit-holder">Sun</div>`
-            }
-            /*  ^^^^^^  */
+          
 
             const items = querySnapshot.docs.map(doc => {
                 return `<li>${doc.data().name}</li>`;
