@@ -67,6 +67,9 @@ body {
     background: var(--primary-bg-color);
     box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
     border: var(--primary-bg-color) solid 2px;
+    /*add transition vv */
+    transition: 0.35s;
+    /*^^^^^^^^^^^^^^^^^*/
 }
 
 .greeting {
@@ -84,7 +87,7 @@ body {
     font-family: var(--font-family-Inter);
 }
 
-input {
+#input-habit {
     background: whitesmoke;
     border-radius: 16px;
     border: rgba(265, 265, 265, 0.65) solid 2px;
@@ -93,6 +96,9 @@ input {
     height: 30px;
     margin-top: 1rem;
     margin-right: 1rem;
+    /*to remove that line around the fild.*/
+    outline: none;
+    /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 }
 
 .habit-list {
@@ -115,13 +121,19 @@ input {
     grid-column: 1 / 4;
     width: 6rem;
     height: 2rem;
+    /*to remove that line around the fild.*/
+    outline: none;
+    /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 }
 
 .add-habit:hover {
     background: var(--primary-bg-color);
     box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.253);
-    border: var(--primary-bg-color) solid 2px;
+    border: none;
     color: white;
+    /*add transition vv*/
+    transition: 0.35s;
+    /*^^^^^^^^^^^^^^^^*/
 }
 
 li {

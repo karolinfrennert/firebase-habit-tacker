@@ -62,7 +62,12 @@ auth.onAuthStateChanged(user => {
                 /*^^^^^^^^^^^^^^^^^^^^*/
                 createdAt: serverTimestamp()
             });
+            /*make a input habit fild clear after add habit*/
+            inputHabit.value = "";
+            /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
         };
+
+
 
         unsubscribe = habitsRef
             .where("uid", "==", user.uid)
@@ -74,13 +79,13 @@ auth.onAuthStateChanged(user => {
 
             if (querySnapshot.docs.length) {
                 document.querySelector('#habitsTableHead').innerHTML = `<div class="habit-holder habit-holder-habit">Habit</div>
-                    <div class="habit-holder">Mon</div>
-                    <div class="habit-holder">Tue</div>
-                    <div class="habit-holder">Wed</div>
-                    <div class="habit-holder">Thu</div>
-                    <div class="habit-holder">Fri</div>
-                    <div class="habit-holder">Sat</div>
-                    <div class="habit-holder">Sun</div>`
+                <div class="habit-holder">Mon</div>
+                <div class="habit-holder">Tue</div>
+                <div class="habit-holder">Wed</div>
+                <div class="habit-holder">Thu</div>
+                <div class="habit-holder">Fri</div>
+                <div class="habit-holder">Sat</div>
+                <div class="habit-holder">Sun</div>`
             }
             /*  ^^^^^^  */
 

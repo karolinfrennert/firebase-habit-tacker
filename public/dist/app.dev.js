@@ -60,6 +60,10 @@ auth.onAuthStateChanged(function (user) {
         /*^^^^^^^^^^^^^^^^^^^^*/
         createdAt: serverTimestamp()
       });
+      /*make a input habit fild clear after add habit*/
+
+      inputHabit.value = "";
+      /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
     };
 
     unsubscribe = habitsRef.where("uid", "==", user.uid)
@@ -67,7 +71,7 @@ auth.onAuthStateChanged(function (user) {
     .onSnapshot(function (querySnapshot) {
       /*past the days' name here*/
       if (querySnapshot.docs.length) {
-        document.querySelector('#habitsTableHead').innerHTML = "<div class=\"habit-holder habit-holder-habit\">Habit</div>\n                    <div class=\"habit-holder\">Mon</div>\n                    <div class=\"habit-holder\">Tue</div>\n                    <div class=\"habit-holder\">Wed</div>\n                    <div class=\"habit-holder\">Thu</div>\n                    <div class=\"habit-holder\">Fri</div>\n                    <div class=\"habit-holder\">Sat</div>\n                    <div class=\"habit-holder\">Sun</div>";
+        document.querySelector('#habitsTableHead').innerHTML = "<div class=\"habit-holder habit-holder-habit\">Habit</div>\n                <div class=\"habit-holder\">Mon</div>\n                <div class=\"habit-holder\">Tue</div>\n                <div class=\"habit-holder\">Wed</div>\n                <div class=\"habit-holder\">Thu</div>\n                <div class=\"habit-holder\">Fri</div>\n                <div class=\"habit-holder\">Sat</div>\n                <div class=\"habit-holder\">Sun</div>";
       }
       /*  ^^^^^^  */
 
