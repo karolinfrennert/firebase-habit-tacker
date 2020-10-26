@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 :root {
     --primary-bg-color: #bbbef2;
-    --habit-list-bg-color: v #797a9e;
+    --habit-list-bg-color: #797a9e;
     --background-color: linear-gradient( 180deg, rgba(151, 148, 213, 0.65) 0%, rgba(255, 255, 255, 0.986) 101.42%);
     --text-bg-color: white;
     --font-family-Inter: "Inter", sans-serif;
@@ -14,11 +18,14 @@
 }
 
 
+
+
 body {
     color: black;
-    height: 100vh;
+    height: 100%;
     background: var(--background-color);
     font-family: var(--font-family-Nunito-regular);
+    overflow: auto;
 }
 
 .sign-in-section {
@@ -135,6 +142,12 @@ li {
     align-self: center;
 }
 
+tr {
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+}
+
 .days {
   grid-row: 5 / 8;
   grid-column: 3/6;
@@ -146,10 +159,25 @@ li {
   
 }
 
+table {
+    margin-bottom: 170px;
+    table-layout: fixed;
+}
+
 tr {
-  display: flex;
-  width: auto;
-  justify-content: space-around;
+    border-bottom: 2px solid white;
+}
+
+th,
+td {
+    width: 20px;
+    height: 30px;
+    text-align: center;
+}
+
+th:first-of-type,
+td:first-of-type {
+    width: 100px;
 }
 
 .days {
@@ -190,5 +218,5 @@ tr {
     background-color: #bbbef2;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    
+    box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);
 }
