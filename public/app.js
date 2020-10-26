@@ -38,7 +38,7 @@ auth.onAuthStateChanged(user => {
 const db = firebase.firestore();
 
 const addHabit = document.getElementById("addHabit");
-const habitsList = document.getElementById("habitsList");
+const habitsList = document.querySelector("#tbody")
 
 /*get habit input vv*/
 const inputHabit = document.querySelector("#input-habit")
@@ -75,10 +75,34 @@ auth.onAuthStateChanged(user => {
         /*add function below*/
         .onSnapshot(querySnapshot => {
 
-         
+
 
             const items = querySnapshot.docs.map(doc => {
-                return `<li>${doc.data().name}</li>`;
+                return `<tr>
+                <td>${doc.data().name}</td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check1">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check2">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check3">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check4">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check5">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check6">
+                </td>
+                <td>
+                    <input type="checkbox" class="checkbox" id="check7">
+                </td>
+
+            </tr>`;
             });
             habitsList.innerHTML = items.join("");
         });
