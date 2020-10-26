@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -9,7 +10,7 @@ html {
 
 :root {
   --primary-bg-color: #bbbef2;
-  --habit-list-bg-color: v #797a9e;
+  --habit-list-bg-color: #797a9e;
   --background-color: linear-gradient(
     180deg,
     rgba(151, 148, 213, 0.65) 0%,
@@ -20,19 +21,16 @@ html {
   --font-family-Nunito-regular: "Nunito Sans", sans-serif;
 }
 
-/*add grid to sign in section vvvv*/
+body {
+  color: black;
+  height: 100%;
+  background: var(--background-color);
+  font-family: var(--font-family-Nunito-regular);
+  overflow: auto;
+}
 
 .sign-in-section {
   display: grid;
-}
-
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-
-body {
-  color: black;
-  height: 100vh;
-  background: var(--background-color);
-  font-family: var(--font-family-Nunito-regular);
 }
 
 .container {
@@ -74,9 +72,7 @@ body {
   background: var(--primary-bg-color);
   box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.15);
   border: var(--primary-bg-color) solid 2px;
-  /*add transition vv */
   transition: 0.35s;
-  /*^^^^^^^^^^^^^^^^^*/
 }
 
 .greeting {
@@ -103,13 +99,11 @@ body {
   height: 30px;
   margin-top: 1rem;
   margin-right: 1rem;
-  /*to remove that line around the fild.*/
+
   outline: none;
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 }
 
 .habit-list {
-  /*box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);*/
   border-top: 2px solid white;
   grid-row: 5 / 8;
   grid-column: 2 / 3;
@@ -129,9 +123,8 @@ body {
   grid-column: 1 / 4;
   width: 6rem;
   height: 2rem;
-  /*to remove that line around the fild.*/
+
   outline: none;
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 }
 
 .add-habit:hover {
@@ -139,9 +132,8 @@ body {
   box-shadow: 3px 3px 4px 4px rgba(65, 60, 60, 0.15);
   border: none;
   color: white;
-  /*add transition vv*/
+
   transition: 0.35s;
-  /*^^^^^^^^^^^^^^^^*/
 }
 
 li {
@@ -203,8 +195,9 @@ input[type="checkbox"]:checked + label:before {
   color: #fff;
 }
 .days {
-  grid-row: 4 / 8;
-  grid-column: 2/6;
+  grid-row: 5 / 8;
+  grid-column: 3/6;
+  border-top: 2px solid white;
   align-items: baseline;
   border-left: none;
   background-color: #bbbef2;
@@ -231,6 +224,17 @@ td {
 th:first-of-type,
 td:first-of-type {
   width: 100px;
+}
+
+.days {
+  grid-row: 5 / 8;
+  grid-column: 3/6;
+  border-top: 2px solid white;
+  align-items: baseline;
+  border-left: none;
+
+  background-color: #bbbef2;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .checkbox {
