@@ -29,7 +29,7 @@ html {
 body {
     color: black;
     height: 100%;
-    /* background: var(--background-color); */
+    background: var(--background-color);
     font-family: var(--font-family-Nunito-regular);
     overflow: auto;
 }
