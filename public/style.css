@@ -9,7 +9,7 @@ html {
 
 :root {
     --primary-bg-color: #bbbef2;
-    --habit-list-bg-color: v #797a9e;
+    --habit-list-bg-color: #797a9e;
     --background-color: linear-gradient( 180deg, rgba(151, 148, 213, 0.65) 0%, rgba(255, 255, 255, 0.986) 101.42%);
     --text-bg-color: white;
     --font-family-Inter: "Inter", sans-serif;
@@ -17,7 +17,7 @@ html {
 }
 
 
-/*add grid to sign in section vvvv*/
+
 
 .sign-in-section {
     display: grid;
@@ -29,7 +29,7 @@ html {
 body {
     color: black;
     height: 100%;
-    /* background: var(--background-color); */
+    background: var(--background-color);
     font-family: var(--font-family-Nunito-regular);
     overflow: auto;
 }
