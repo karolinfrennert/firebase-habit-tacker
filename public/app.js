@@ -82,24 +82,31 @@ auth.onAuthStateChanged(user => {
                 <td>${doc.data().name}</td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check1">
+                    <label for="check1"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check2">
+                    <label for="check2"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check3">
+                    <label for="check3"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check4">
+                    <label for="check4"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check5">
+                    <label for="check5"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check6">
+                    <label for="check6"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check7">
+                    <label for="check7"></label>
                 </td>
 
             </tr>`;
