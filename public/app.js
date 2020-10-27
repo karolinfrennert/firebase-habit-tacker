@@ -81,32 +81,32 @@ auth.onAuthStateChanged(user => {
                 return `<tr>
                 <td>${doc.data().name}</td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check1">
-                    <label for="check1"></label>
+                    <input type="checkbox" class="checkbox" id="check1${doc.data().name}">
+                    <label for="check1${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check2">
-                    <label for="check2"></label>
+                    <input type="checkbox" class="checkbox" id="check2${doc.data().name}">
+                    <label for="check2${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check3">
-                    <label for="check3"></label>
+                    <input type="checkbox" class="checkbox" id="check3${doc.data().name}">
+                    <label for="check3${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check4">
-                    <label for="check4"></label>
+                    <input type="checkbox" class="checkbox" id="check4${doc.data().name}">
+                    <label for="check4${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check5">
-                    <label for="check5"></label>
+                    <input type="checkbox" class="checkbox" id="check5${doc.data().name}">
+                    <label for="check5${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check6">
-                    <label for="check6"></label>
+                    <input type="checkbox" class="checkbox" id="check6${doc.data().name}">
+                    <label for="check6${doc.data().name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check7">
-                    <label for="check7"></label>
+                    <input type="checkbox" class="checkbox" id="check7${doc.data().name}">
+                    <label for="check7${doc.data().name}"></label>
                 </td>
 
             </tr>`;
