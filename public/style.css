@@ -63,7 +63,7 @@ body {
   width: 128px;
   height: 32px;
   grid-row: 1 / 2;
-  grid-column: 7 / 9;
+  grid-column: 6 / 7;
   justify-self: end;
 }
 
@@ -143,24 +143,8 @@ li {
   align-self: center;
 }
 
-.days {
-  grid-row: 5 / 8;
-  grid-column: 2/6;
-  border-top: 2px solid white;
-  align-items: baseline;
-  border-left: none;
-  background-image: repeating-linear-gradient(
-    90deg,
-    #cacbed,
-    #cacbed 110px,
-    #9794d5 0px,
-    #9794d5 220px
-  );
-  border-bottom-right-radius: 0.5rem;
-  /*box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);*/
-}
-
 tr {
+  font-size: 24px;
   display: flex;
   width: auto;
   justify-content: space-around;
@@ -197,12 +181,22 @@ input[type="checkbox"]:checked + label:before {
 .days {
   grid-row: 5 / 8;
   grid-column: 2/6;
-  border-top: 2px solid white;
   align-items: baseline;
-  border-left: none;
   background-color: #bbbef2;
-  border-bottom-right-radius: 0.5rem;
-  /*box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);*/
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.25);
+}
+
+tbody {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #cacbed,
+    #cacbed 110px,
+    #9794d5 260px,
+    #9794d5 220px
+  );
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
 table {
@@ -211,7 +205,8 @@ table {
 }
 
 tr {
-  border-bottom: 2px solid white;
+  border-bottom: 0.3rem solid white;
+  padding: 1rem;
 }
 
 th,
@@ -224,17 +219,6 @@ td {
 th:first-of-type,
 td:first-of-type {
   width: 100px;
-}
-
-.days {
-  grid-row: 5 / 8;
-  grid-column: 3/6;
-  border-top: 2px solid white;
-  align-items: baseline;
-  border-left: none;
-
-  background-color: #bbbef2;
-  border-bottom-right-radius: 0.5rem;
 }
 
 .checkbox {
