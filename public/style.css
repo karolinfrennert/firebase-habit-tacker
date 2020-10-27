@@ -145,7 +145,7 @@ li {
 
 .days {
   grid-row: 5 / 8;
-  grid-column: 3/6;
+  grid-column: 2/6;
   border-top: 2px solid white;
   align-items: baseline;
   border-left: none;
@@ -196,7 +196,7 @@ input[type="checkbox"]:checked + label:before {
 }
 .days {
   grid-row: 5 / 8;
-  grid-column: 3/6;
+  grid-column: 2/6;
   border-top: 2px solid white;
   align-items: baseline;
   border-left: none;
