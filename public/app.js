@@ -68,7 +68,7 @@ auth.onAuthStateChanged(user => {
             const items = querySnapshot.docs.map(doc => {
                 const {name} = doc.data(); 
                 return `<tr>
-                <td>${name}</td>
+                <td id="habitBox">${name}</td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check1${name}">
                     <label for="check1${name}" onclick="alert('HELP')"></label>
