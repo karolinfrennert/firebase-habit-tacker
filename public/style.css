@@ -64,11 +64,11 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label:before {
   content: "\2714";
-  border: 0.2em solid white;
+  border: 0.1em solid white;
   border-radius: 0.2em;
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.8em;
   padding-left: 0.2em;
   padding-bottom: 0.3em;
   margin-right: 0.2em;
@@ -76,6 +76,8 @@ input[type="checkbox"] + label:before {
   color: transparent;
   transition: 0.2s;
 }
+
+
 
 input[type="checkbox"] + label:active:before {
   transform: scale(0);
@@ -85,13 +87,6 @@ input[type="checkbox"]:checked + label:before {
   background-color: #797a9e;
   border-color: #797a9e;
   color: #fff;
-}
-
-li {
-  font-size: 0.75rem;
-  list-style-type: none;
-  grid-column: 2/3;
-  align-self: center;
 }
 
 table {
@@ -121,8 +116,8 @@ tr {
 
 th,
 td {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   text-align: center;
   padding: 1rem;
 }
@@ -131,12 +126,16 @@ td {
 
 td:nth-of-type(2n + 1) {
   background: #9794d5;
+  border-bottom: 0.1rem solid white;
+  border-right: 0.1rem solid white;
 }
 
 /* Color all the even td */
 
 td:nth-of-type(2n) {
   background: #cacbed;
+  border-bottom: 0.1rem solid white;
+  border-right: 0.1rem solid white;
 }
 
 th:first-of-type,
@@ -220,7 +219,7 @@ svg {
 
 #habitBox {
   background-color: #bbbef2;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.1rem solid white;
   text-align: start;
 }
 
@@ -240,7 +239,6 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*align-items: center;*/
   border: black 2px solid;
   padding: 2.5rem;
   grid-column: 2/3;
