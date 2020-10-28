@@ -22,8 +22,6 @@ auth.onAuthStateChanged(user => {
     if (user) {
         //signed in
 
-        /*change hidden to style.display, Because the power of style.display attribute
-         is more than the attribute of hidden.*/
         whenSignedIn.style.display = "initial";
         whenSignedOut.style.display = "none";
         userDetails.innerHTML = `<h3> Hello ${user.displayName}!</h3> `;
@@ -40,73 +38,64 @@ const db = firebase.firestore();
 const addHabit = document.getElementById("addHabit");
 const habitsList = document.querySelector("#tbody")
 
-/*get habit input vv*/
-const inputHabit = document.querySelector("#input-habit")
-    /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
+const inputHabit = document.querySelector("#input-habit")
+    
 let habitsRef;
 let unsubsribe;
+
 
 auth.onAuthStateChanged(user => {
     if (user) {
         habitsRef = db.collection("habits");
-
         addHabit.onclick = (e) => {
             e.preventDefault()
             const { serverTimestamp } = firebase.firestore.FieldValue;
-
             habitsRef.add({
                 uid: user.uid,
-                /*vvvvvvvvvvvvvvvvvvvv*/
                 name: inputHabit.value,
-                /*^^^^^^^^^^^^^^^^^^^^*/
-                createdAt: serverTimestamp()
+                createdAt: serverTimestamp(),
+                
             });
-            /*make a input habit fild clear after add habit*/
             inputHabit.value = "";
-            /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+           
         };
-
-
 
         unsubscribe = habitsRef
             .where("uid", "==", user.uid)
-
-        /*add function below*/
+       
         .onSnapshot(querySnapshot => {
-
-
-
             const items = querySnapshot.docs.map(doc => {
+                const {name} = doc.data(); 
                 return `<tr>
-                <td>${doc.data().name}</td>
+                <td>${name}</td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check1${doc.data().name}">
-                    <label for="check1${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check1${name}">
+                    <label for="check1${name}" onclick="alert('HELP')"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check2${doc.data().name}">
-                    <label for="check2${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check2${name}">
+                    <label for="check2${name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check3${doc.data().name}">
-                    <label for="check3${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check3${name}">
+                    <label for="check3${name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check4${doc.data().name}">
-                    <label for="check4${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check4${name}">
+                    <label for="check4${name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check5${doc.data().name}">
-                    <label for="check5${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check5${name}">
+                    <label for="check5${name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check6${doc.data().name}">
-                    <label for="check6${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check6${name}">
+                    <label for="check6${name}"></label>
                 </td>
                 <td>
-                    <input type="checkbox" class="checkbox" id="check7${doc.data().name}">
-                    <label for="check7${doc.data().name}"></label>
+                    <input type="checkbox" class="checkbox" id="check7${name}">
+                    <label for="check7${name}"></label>
                 </td>
 
             </tr>`;
