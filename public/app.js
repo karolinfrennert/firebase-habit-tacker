@@ -11,11 +11,7 @@ const userDetails = document.getElementById("userDetails");
 
 const provider = new firebase.auth.GoogleAuthProvider();
 
-//input field
-//const inputHabit = document.getElementById('input-habit');
-
 signInBtn.onclick = () => auth.signInWithPopup(provider);
-
 signOutbtn.onclick = () => auth.signOut();
 
 auth.onAuthStateChanged(user => {
@@ -34,41 +30,51 @@ auth.onAuthStateChanged(user => {
 });
 
 const db = firebase.firestore();
-
 const addHabit = document.getElementById("addHabit");
 const habitsList = document.querySelector("#tbody")
-
-
 const inputHabit = document.querySelector("#input-habit")
     
 let habitsRef;
 let unsubsribe;
+let remove;
 
 
 auth.onAuthStateChanged(user => {
     if (user) {
         habitsRef = db.collection("habits");
+
+        remove = (uid) => {
+            db.collection('habits').doc(uid).delete()
+        } 
+
         addHabit.onclick = (e) => {
             e.preventDefault()
-            const { serverTimestamp } = firebase.firestore.FieldValue;
-            habitsRef.add({
+            const {serverTimestamp} = firebase.firestore.FieldValue;
+            db.collection('habits').doc(inputHabit.value).set({
                 uid: user.uid,
                 name: inputHabit.value,
                 createdAt: serverTimestamp(),
+                pet: "Kurt"
                 
             });
             inputHabit.value = "";
            
         };
 
+     
+
         unsubscribe = habitsRef
             .where("uid", "==", user.uid)
        
         .onSnapshot(querySnapshot => {
-            const items = querySnapshot.docs.map(doc => {
-                const {name} = doc.data(); 
-                return `<tr>
-                <td id="habitBox">${name}</td>
+
+            const items = querySnapshot.docs.map(doc => {   
+                
+                const {name} = doc.data();                             
+                               
+                return `<tr>          
+                                
+                <td id="habitBox"><button id="removeButton" class="removeButton" onclick="remove('${name}')">🗑️</button>${name}</td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check1${name}">
                     <label for="check1${name}" onclick="alert('HELP')"></label>
@@ -99,8 +105,10 @@ auth.onAuthStateChanged(user => {
                 </td>
 
             </tr>`;
+           
             });
             habitsList.innerHTML = items.join("");
+           
         });
     }
 });
