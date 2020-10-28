@@ -220,7 +220,7 @@ svg {
 
 #habitBox {
   background-color: #bbbef2;
-  border-top: 0.2rem solid white;
+  border-bottom: 0.2rem solid white;
 }
 
 .habit-holder {

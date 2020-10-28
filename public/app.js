@@ -53,8 +53,7 @@ auth.onAuthStateChanged(user => {
             db.collection('habits').doc(inputHabit.value).set({
                 uid: user.uid,
                 name: inputHabit.value,
-                createdAt: serverTimestamp(),
-                pet: "Kurt"
+                createdAt: serverTimestamp()              
                 
             });
             inputHabit.value = "";
@@ -77,7 +76,7 @@ auth.onAuthStateChanged(user => {
                 <td id="habitBox"><button id="removeButton" class="removeButton" onclick="remove('${name}')">🗑️</button>${name}</td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check1${name}">
-                    <label for="check1${name}" onclick="alert('HELP')"></label>
+                    <label for="check1${name}"></label>
                 </td>
                 <td>
                     <input type="checkbox" class="checkbox" id="check2${name}">
